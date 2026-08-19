@@ -7,15 +7,13 @@ import 'app_palette.dart';
 class AppTheme {
   final AppPalette palette;
 
-  const AppTheme({
-    required this.palette,
-  });
+  const AppTheme({required this.palette});
 
   ThemeData get light {
     return ThemeData(
       brightness: Brightness.light,
       colorScheme: ColorScheme.fromSeed(
-        seedColor: palette.primary,
+        seedColor: palette.brand.primary,
         brightness: Brightness.light,
       ),
     );
@@ -25,7 +23,7 @@ class AppTheme {
     return ThemeData(
       brightness: Brightness.dark,
       colorScheme: ColorScheme.fromSeed(
-        seedColor: palette.primary,
+        seedColor: palette.brand.primary,
         brightness: Brightness.dark,
       ),
     );
