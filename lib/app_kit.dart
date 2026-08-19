@@ -1,5 +1,3 @@
 library app_kit;
 
-class AppKit {
-  // Let the development begin!
-}
+export 'src/theme/app_palette.dart';
