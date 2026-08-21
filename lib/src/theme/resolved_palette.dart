@@ -1,0 +1,97 @@
+import 'package:flutter/material.dart';
+
+/// Defines a fully resolved color palette.
+///
+/// Unlike [AppPalette], this palette contains no nullable values.
+/// All colors are guaranteed to be available after resolving the user's palette with a set of default values.
+class ResolvedPalette {
+  final ResolvedBrandColors brand;
+  final ResolvedSurfaceColors surfaces;
+  final ResolvedContentColors content;
+  final ResolvedStatusColors status;
+  final ResolvedOutlinesColors outlines;
+
+  /// Creates a fully resolved color palette.
+  const ResolvedPalette({
+    required this.brand,
+    required this.surfaces,
+    required this.content,
+    required this.status,
+    required this.outlines,
+  });
+}
+
+/// Defines the resolved colors associated with the application brand.
+class ResolvedBrandColors {
+  final Color primary;
+  final Color secondary;
+
+  final Color onPrimary;
+  final Color onSecondary;
+
+  const ResolvedBrandColors({
+    required this.primary,
+    required this.secondary,
+    required this.onPrimary,
+    required this.onSecondary,
+  });
+}
+
+/// Defines the resolved colors used for backgrounds and surfaces.
+class ResolvedSurfaceColors {
+  final Color background;
+  final Color surface;
+  final Color surfaceVariant;
+
+  final Color onBackground;
+  final Color onSurface;
+  final Color onSurfaceVariant;
+
+  const ResolvedSurfaceColors({
+    required this.background,
+    required this.surface,
+    required this.surfaceVariant,
+    required this.onBackground,
+    required this.onSurface,
+    required this.onSurfaceVariant,
+  });
+}
+
+/// Defines the resolved colors used for text and other content.
+class ResolvedContentColors {
+  final Color text;
+  final Color textSecondary;
+  final Color textDisabled;
+
+  const ResolvedContentColors({
+    required this.text,
+    required this.textSecondary,
+    required this.textDisabled,
+  });
+}
+
+/// Defines the resolved colors used to communicate application states and feedback.
+class ResolvedStatusColors {
+  final Color error;
+  final Color warning;
+  final Color success;
+  final Color info;
+
+  const ResolvedStatusColors({
+    required this.error,
+    required this.warning,
+    required this.success,
+    required this.info,
+  });
+}
+
+/// Defines the resolved colors used for widget outlines.
+class ResolvedOutlinesColors {
+  final Color outline;
+  final Color outlineVariant;
+
+  const ResolvedOutlinesColors({
+    required this.outline,
+    required this.outlineVariant,
+  });
+}
