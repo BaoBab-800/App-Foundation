@@ -73,15 +73,26 @@ class ResolvedContentColors {
 /// Defines the resolved colors used to communicate application states and feedback.
 class ResolvedStatusColors {
   final Color error;
+  final Color onError;
+
   final Color warning;
+  final Color onWarning;
+
   final Color success;
+  final Color onSuccess;
+
   final Color info;
+  final Color onInfo;
 
   const ResolvedStatusColors({
     required this.error,
+    required this.onError,
     required this.warning,
+    required this.onWarning,
     required this.success,
+    required this.onSuccess,
     required this.info,
+    required this.onInfo,
   });
 }
 

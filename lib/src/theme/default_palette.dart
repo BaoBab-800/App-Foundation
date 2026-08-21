@@ -28,9 +28,16 @@ const defaultLightPalette = ResolvedPalette(
 
   status: ResolvedStatusColors(
     error: Color(0xFFB3261E),
+    onError: Color(0xFFFFFFFF),
+
     warning: Color(0xFFE6A700),
+    onWarning: Color(0xFF1C1B1F),
+
     success: Color(0xFF2E7D32),
+    onSuccess: Color(0xFFFFFFFF),
+
     info: Color(0xFF1976D2),
+    onInfo: Color(0xFFFFFFFF),
   ),
 
   outlines: ResolvedOutlinesColors(
@@ -65,9 +72,16 @@ const defaultDarkPalette = ResolvedPalette(
 
   status: ResolvedStatusColors(
     error: Color(0xFFF2B8B5),
+    onError: Color(0xFF601410),
+
     warning: Color(0xFFFFD54F),
+    onWarning: Color(0xFF332D00),
+
     success: Color(0xFF81C784),
+    onSuccess: Color(0xFF102A13),
+
     info: Color(0xFF90CAF9),
+    onInfo: Color(0xFF0D2A3D),
   ),
 
   outlines: ResolvedOutlinesColors(

@@ -31,8 +31,10 @@ void main() {
           textSecondary: Color(0xFF000301),
         ),
         status: AppStatusColors(
-          warning: Color(0xFF000401),
-          info: Color(0xFF000402),
+          error: Color(0xFF000401),
+          onError: Color(0xFF000402),
+          success: Color(0xFF000405),
+          onSuccess: Color(0xFF000406),
         ),
         outlines: AppOutlinesColors(
           outlineVariant: Color(0xFF000501),
@@ -60,10 +62,17 @@ void main() {
       expect(resolved.content.textSecondary, palette.content!.textSecondary);
       expect(resolved.content.textDisabled, defaults.content.textDisabled);
 
-      expect(resolved.status.error, defaults.status.error);
-      expect(resolved.status.warning, palette.status!.warning);
-      expect(resolved.status.success, defaults.status.success);
-      expect(resolved.status.info, palette.status!.info);
+      expect(resolved.status.error, palette.status!.error);
+      expect(resolved.status.onError, palette.status!.onError);
+
+      expect(resolved.status.warning, defaults.status.warning);
+      expect(resolved.status.onWarning, defaults.status.onWarning);
+
+      expect(resolved.status.success, palette.status!.success);
+      expect(resolved.status.onSuccess, palette.status!.onSuccess);
+
+      expect(resolved.status.info, defaults.status.info);
+      expect(resolved.status.onInfo, defaults.status.onInfo);
 
       expect(resolved.outlines.outline, defaults.outlines.outline);
       expect(resolved.outlines.outlineVariant, palette.outlines!.outlineVariant);
@@ -96,9 +105,13 @@ const _defaults = ResolvedPalette(
 
   status: ResolvedStatusColors(
     error: Color(0xFF400001),
-    warning: Color(0xFF400002),
-    success: Color(0xFF400003),
-    info: Color(0xFF400004),
+    onError: Color(0xFF400002),
+    warning: Color(0xFF400003),
+    onWarning: Color(0xFF400004),
+    success: Color(0xFF400005),
+    onSuccess: Color(0xFF400006),
+    info: Color(0xFF400007),
+    onInfo: Color(0xFF400008),
   ),
 
   outlines: ResolvedOutlinesColors(
@@ -125,9 +138,13 @@ void _expectResolvedPalette(ResolvedPalette actual, ResolvedPalette expected) {
   expect(actual.content.textDisabled, expected.content.textDisabled);
 
   expect(actual.status.error, expected.status.error);
+  expect(actual.status.onError, expected.status.onError);
   expect(actual.status.warning, expected.status.warning);
+  expect(actual.status.onWarning, expected.status.onWarning);
   expect(actual.status.success, expected.status.success);
+  expect(actual.status.onSuccess, expected.status.onSuccess);
   expect(actual.status.info, expected.status.info);
+  expect(actual.status.onInfo, expected.status.onInfo);
 
   expect(actual.outlines.outline, expected.outlines.outline);
   expect(actual.outlines.outlineVariant, expected.outlines.outlineVariant);

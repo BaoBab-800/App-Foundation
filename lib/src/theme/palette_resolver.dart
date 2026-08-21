@@ -82,9 +82,16 @@ class PaletteResolver {
       ) {
     return ResolvedStatusColors(
       error: palette?.error ?? defaults.error,
+      onError: palette?.onError ?? defaults.onError,
+
       warning: palette?.warning ?? defaults.warning,
+      onWarning: palette?.onWarning ?? defaults.onWarning,
+
       success: palette?.success ?? defaults.success,
+      onSuccess: palette?.onSuccess ?? defaults.onSuccess,
+
       info: palette?.info ?? defaults.info,
+      onInfo: palette?.onInfo ?? defaults.onInfo,
     );
   }
 

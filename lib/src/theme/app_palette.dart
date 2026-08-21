@@ -74,15 +74,26 @@ class AppContentColors {
 /// Defines colors used to communicate application states and feedback.
 class AppStatusColors {
   final Color? error;
+  final Color? onError;
+
   final Color? warning;
+  final Color? onWarning;
+
   final Color? success;
+  final Color? onSuccess;
+
   final Color? info;
+  final Color? onInfo;
 
   const AppStatusColors({
     this.error,
+    this.onError,
     this.warning,
+    this.onWarning,
     this.success,
+    this.onSuccess,
     this.info,
+    this.onInfo,
   });
 }
 
