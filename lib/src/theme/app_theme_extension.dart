@@ -47,4 +47,40 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
       outlines: outlines.lerp(other.outlines, t),
     );
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        other is AppThemeExtension &&
+            content.text == other.content.text &&
+            content.textSecondary == other.content.textSecondary &&
+            content.textDisabled == other.content.textDisabled &&
+            status.error == other.status.error &&
+            status.onError == other.status.onError &&
+            status.warning == other.status.warning &&
+            status.onWarning == other.status.onWarning &&
+            status.success == other.status.success &&
+            status.onSuccess == other.status.onSuccess &&
+            status.info == other.status.info &&
+            status.onInfo == other.status.onInfo &&
+            outlines.outline == other.outlines.outline &&
+            outlines.outlineVariant == other.outlines.outlineVariant;
+  }
+
+  @override
+  int get hashCode => Object.hashAll([
+    content.text,
+    content.textSecondary,
+    content.textDisabled,
+    status.error,
+    status.onError,
+    status.warning,
+    status.onWarning,
+    status.success,
+    status.onSuccess,
+    status.info,
+    status.onInfo,
+    outlines.outline,
+    outlines.outlineVariant,
+  ]);
 }
