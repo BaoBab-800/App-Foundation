@@ -8,19 +8,19 @@ import 'default_palette.dart';
 /// Flutter ThemeData palette configuration converter
 /// Accepts a palette abstraction and uses it to assemble standard Flutter ThemeData objects.
 class AppTheme {
-  final AppPalette lightPalette;
-  final AppPalette darkPalette;
+  final AppPalette? lightPalette;
+  final AppPalette? darkPalette;
 
   const AppTheme({
-    required this.lightPalette,
-    required this.darkPalette,
+    this.lightPalette,
+    this.darkPalette,
   });
 
   /// Builds the light theme using the resolved light palette.
   ThemeData get light {
     final palette = PaletteResolver(
       defaults: defaultLightPalette,
-    ).resolve(lightPalette);
+    ).resolve(lightPalette ?? const AppPalette());
 
     return ThemeData(
       brightness: Brightness.light,
@@ -35,7 +35,7 @@ class AppTheme {
   ThemeData get dark {
     final palette = PaletteResolver(
       defaults: defaultDarkPalette,
-    ).resolve(darkPalette);
+    ).resolve(darkPalette ?? const AppPalette());
 
     return ThemeData(
       brightness: Brightness.dark,
