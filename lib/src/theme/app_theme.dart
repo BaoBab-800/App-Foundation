@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'app_palette.dart';
 import 'palette_resolver.dart';
 import 'default_palette.dart';
+import 'app_theme_extension.dart';
 
 /// Flutter ThemeData palette configuration converter
 /// Accepts a palette abstraction and uses it to assemble standard Flutter ThemeData objects.
@@ -28,6 +29,14 @@ class AppTheme {
         Brightness.light,
         palette,
       ),
+
+      extensions: [
+        AppThemeExtension(
+          content: palette.content,
+          status: palette.status,
+          outlines: palette.outlines,
+        ),
+      ],
     );
   }
 
@@ -43,6 +52,14 @@ class AppTheme {
         Brightness.dark,
         palette,
       ),
+
+      extensions: [
+        AppThemeExtension(
+          content: palette.content,
+          status: palette.status,
+          outlines: palette.outlines,
+        ),
+      ],
     );
   }
 
