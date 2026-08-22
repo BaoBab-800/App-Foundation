@@ -68,6 +68,14 @@ class ResolvedContentColors {
     required this.textSecondary,
     required this.textDisabled,
   });
+
+  ResolvedContentColors lerp(ResolvedContentColors other, double t) {
+    return ResolvedContentColors(
+      text: Color.lerp(text, other.text, t)!,
+      textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
+      textDisabled: Color.lerp(textDisabled, other.textDisabled, t)!,
+    );
+  }
 }
 
 /// Defines the resolved colors used to communicate application states and feedback.
@@ -94,6 +102,19 @@ class ResolvedStatusColors {
     required this.info,
     required this.onInfo,
   });
+
+  ResolvedStatusColors lerp(ResolvedStatusColors other, double t) {
+    return ResolvedStatusColors(
+      error: Color.lerp(error, other.error, t)!,
+      onError: Color.lerp(onError, other.onError, t)!,
+      warning: Color.lerp(warning, other.warning, t)!,
+      onWarning: Color.lerp(onWarning, other.onWarning, t)!,
+      success: Color.lerp(success, other.success, t)!,
+      onSuccess: Color.lerp(onSuccess, other.onSuccess, t)!,
+      info: Color.lerp(info, other.info, t)!,
+      onInfo: Color.lerp(onInfo, other.onInfo, t)!,
+    );
+  }
 }
 
 /// Defines the resolved colors used for widget outlines.
@@ -105,4 +126,11 @@ class ResolvedOutlinesColors {
     required this.outline,
     required this.outlineVariant,
   });
+
+  ResolvedOutlinesColors lerp(ResolvedOutlinesColors other, double t) {
+    return ResolvedOutlinesColors(
+      outline: Color.lerp(outline, other.outline, t)!,
+      outlineVariant: Color.lerp(outlineVariant, other.outlineVariant, t)!,
+    );
+  }
 }
