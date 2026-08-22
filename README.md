@@ -128,6 +128,25 @@ Unspecified colors are automatically filled with the appropriate defaults.
 
 The resulting themes can be passed directly to MaterialApp.
 
+## Theme extensions
+
+AppKit provides `AppThemeExtension` for accessing application-specific colors
+that are not represented by Flutter's standard `ColorScheme`.
+
+The extension contains additional semantic color groups:
+
+- `content`
+- `status`
+- `outlines`
+
+These colors are automatically added to the generated `ThemeData`.
+
+You can access them using Flutter's standard `Theme.of(context)` API:
+
+```dart
+final appTheme = Theme.of(context).extension<AppThemeExtension>()!;
+```
+
 ## How it works
 
 AppKit separates theme configuration from theme generation.
