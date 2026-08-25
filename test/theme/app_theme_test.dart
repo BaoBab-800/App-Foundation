@@ -26,7 +26,7 @@ void main() {
     final extension = AppTheme().dark.extension<AppThemeExtension>();
 
     expect(extension, isNotNull);
-    expect(extension!.content.text, const Color(0xFFE6E0E9));
+    expect(extension!.content.text, const Color(0xFFE6E1E5));
     expect(extension.status.error, const Color(0xFFF2B8B5));
     expect(extension.outlines.outline, const Color(0xFF938F99));
   });
