@@ -17,7 +17,7 @@ void main() {
     expect(extension!.content.text, const Color(0xFF010203));
     expect(extension.content.textSecondary, const Color(0xFF49454F));
     expect(extension.status.success, const Color(0xFF040506));
-    expect(extension.status.error, const Color(0xFFB3261E));
+    expect(extension.status.error, const Color(0xFFBA1A1A));
     expect(extension.outlines.outlineVariant, const Color(0xFF070809));
     expect(extension.outlines.outline, const Color(0xFF79747E));
   });
@@ -27,7 +27,7 @@ void main() {
 
     expect(extension, isNotNull);
     expect(extension!.content.text, const Color(0xFFE6E1E5));
-    expect(extension.status.error, const Color(0xFFF2B8B5));
+    expect(extension.status.error, const Color(0xFFFFB4AB));
     expect(extension.outlines.outline, const Color(0xFF938F99));
   });
 }
