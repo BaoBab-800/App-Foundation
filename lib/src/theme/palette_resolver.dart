@@ -46,8 +46,11 @@ class PaletteResolver {
     return ResolvedBrandColors(
       primary: palette?.primary ?? defaults.primary,
       secondary: palette?.secondary ?? defaults.secondary,
+      tertiary: palette?.tertiary ?? defaults.tertiary,
+
       onPrimary: palette?.onPrimary ?? defaults.onPrimary,
       onSecondary: palette?.onSecondary ?? defaults.onSecondary,
+      onTertiary: palette?.onTertiary ?? defaults.onTertiary,
     );
   }
 
@@ -59,6 +62,7 @@ class PaletteResolver {
       background: palette?.background ?? defaults.background,
       surface: palette?.surface ?? defaults.surface,
       surfaceVariant: palette?.surfaceVariant ?? defaults.surfaceVariant,
+
       onBackground: palette?.onBackground ?? defaults.onBackground,
       onSurface: palette?.onSurface ?? defaults.onSurface,
       onSurfaceVariant: palette?.onSurfaceVariant ?? defaults.onSurfaceVariant,
@@ -72,7 +76,9 @@ class PaletteResolver {
     return ResolvedContentColors(
       text: palette?.text ?? defaults.text,
       textSecondary: palette?.textSecondary ?? defaults.textSecondary,
+      textTertiary: palette?.textTertiary ?? defaults.textTertiary,
       textDisabled: palette?.textDisabled ?? defaults.textDisabled,
+      textInverse: palette?.textInverse ?? defaults.textInverse,
     );
   }
 
@@ -83,15 +89,23 @@ class PaletteResolver {
     return ResolvedStatusColors(
       error: palette?.error ?? defaults.error,
       onError: palette?.onError ?? defaults.onError,
+      errorContainer: palette?.errorContainer ?? defaults.errorContainer,
+      onErrorContainer: palette?.onErrorContainer ?? defaults.onErrorContainer,
 
       warning: palette?.warning ?? defaults.warning,
       onWarning: palette?.onWarning ?? defaults.onWarning,
+      warningContainer: palette?.warningContainer ?? defaults.warningContainer,
+      onWarningContainer: palette?.onWarningContainer ?? defaults.onWarningContainer,
 
       success: palette?.success ?? defaults.success,
       onSuccess: palette?.onSuccess ?? defaults.onSuccess,
+      successContainer: palette?.successContainer ?? defaults.successContainer,
+      onSuccessContainer: palette?.onSuccessContainer ?? defaults.onSuccessContainer,
 
       info: palette?.info ?? defaults.info,
       onInfo: palette?.onInfo ?? defaults.onInfo,
+      infoContainer: palette?.infoContainer ?? defaults.infoContainer,
+      onInfoContainer: palette?.onInfoContainer ?? defaults.onInfoContainer,
     );
   }
 

@@ -25,15 +25,20 @@ class ResolvedPalette {
 class ResolvedBrandColors {
   final Color primary;
   final Color secondary;
+  final Color tertiary;
 
   final Color onPrimary;
   final Color onSecondary;
+  final Color onTertiary;
 
   const ResolvedBrandColors({
     required this.primary,
     required this.secondary,
+    required this.tertiary,
+
     required this.onPrimary,
     required this.onSecondary,
+    required this.onTertiary,
   });
 }
 
@@ -61,19 +66,25 @@ class ResolvedSurfaceColors {
 class ResolvedContentColors {
   final Color text;
   final Color textSecondary;
+  final Color textTertiary;
   final Color textDisabled;
+  final Color textInverse;
 
   const ResolvedContentColors({
     required this.text,
     required this.textSecondary,
+    required this.textTertiary,
     required this.textDisabled,
+    required this.textInverse,
   });
 
   ResolvedContentColors lerp(ResolvedContentColors other, double t) {
     return ResolvedContentColors(
       text: Color.lerp(text, other.text, t)!,
       textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
+      textTertiary: Color.lerp(textTertiary, other.textTertiary, t)!,
       textDisabled: Color.lerp(textDisabled, other.textDisabled, t)!,
+      textInverse: Color.lerp(textInverse, other.textInverse, t)!,
     );
   }
 }
@@ -82,37 +93,67 @@ class ResolvedContentColors {
 class ResolvedStatusColors {
   final Color error;
   final Color onError;
+  final Color errorContainer;
+  final Color onErrorContainer;
 
   final Color warning;
   final Color onWarning;
+  final Color warningContainer;
+  final Color onWarningContainer;
 
   final Color success;
   final Color onSuccess;
+  final Color successContainer;
+  final Color onSuccessContainer;
 
   final Color info;
   final Color onInfo;
+  final Color infoContainer;
+  final Color onInfoContainer;
 
   const ResolvedStatusColors({
     required this.error,
     required this.onError,
+    required this.errorContainer,
+    required this.onErrorContainer,
+
     required this.warning,
     required this.onWarning,
+    required this.warningContainer,
+    required this.onWarningContainer,
+
     required this.success,
     required this.onSuccess,
+    required this.successContainer,
+    required this.onSuccessContainer,
+
     required this.info,
     required this.onInfo,
+    required this.infoContainer,
+    required this.onInfoContainer,
   });
 
   ResolvedStatusColors lerp(ResolvedStatusColors other, double t) {
     return ResolvedStatusColors(
       error: Color.lerp(error, other.error, t)!,
       onError: Color.lerp(onError, other.onError, t)!,
+      errorContainer: Color.lerp(errorContainer, other.errorContainer, t)!,
+      onErrorContainer: Color.lerp(onErrorContainer, other.onErrorContainer, t)!,
+
       warning: Color.lerp(warning, other.warning, t)!,
       onWarning: Color.lerp(onWarning, other.onWarning, t)!,
+      warningContainer: Color.lerp(warningContainer, other.warningContainer, t)!,
+      onWarningContainer: Color.lerp(onWarningContainer, other.onWarningContainer, t)!,
+
       success: Color.lerp(success, other.success, t)!,
       onSuccess: Color.lerp(onSuccess, other.onSuccess, t)!,
+      successContainer: Color.lerp(successContainer, other.successContainer, t)!,
+      onSuccessContainer: Color.lerp(onSuccessContainer, other.onSuccessContainer, t)!,
+
       info: Color.lerp(info, other.info, t)!,
       onInfo: Color.lerp(onInfo, other.onInfo, t)!,
+      infoContainer: Color.lerp(infoContainer, other.infoContainer, t)!,
+      onInfoContainer: Color.lerp(onInfoContainer, other.onInfoContainer, t)!,
     );
   }
 }

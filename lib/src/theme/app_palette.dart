@@ -26,15 +26,20 @@ class AppPalette {
 class AppBrandColors {
   final Color? primary;
   final Color? secondary;
+  final Color? tertiary;
 
   final Color? onPrimary;
   final Color? onSecondary;
+  final Color? onTertiary;
 
   const AppBrandColors({
     this.primary,
     this.secondary,
+    this.tertiary,
+
     this.onPrimary,
     this.onSecondary,
+    this.onTertiary,
   });
 }
 
@@ -62,12 +67,16 @@ class AppSurfaceColors {
 class AppContentColors {
   final Color? text;
   final Color? textSecondary;
+  final Color? textTertiary;
   final Color? textDisabled;
+  final Color? textInverse;
 
   const AppContentColors({
     this.text,
     this.textSecondary,
+    this.textTertiary,
     this.textDisabled,
+    this.textInverse,
   });
 }
 
@@ -75,25 +84,44 @@ class AppContentColors {
 class AppStatusColors {
   final Color? error;
   final Color? onError;
+  final Color? errorContainer;
+  final Color? onErrorContainer;
 
   final Color? warning;
   final Color? onWarning;
+  final Color? warningContainer;
+  final Color? onWarningContainer;
 
   final Color? success;
   final Color? onSuccess;
+  final Color? successContainer;
+  final Color? onSuccessContainer;
 
   final Color? info;
   final Color? onInfo;
+  final Color? infoContainer;
+  final Color? onInfoContainer;
 
   const AppStatusColors({
     this.error,
     this.onError,
+    this.errorContainer,
+    this.onErrorContainer,
+
     this.warning,
     this.onWarning,
+    this.warningContainer,
+    this.onWarningContainer,
+
     this.success,
     this.onSuccess,
+    this.successContainer,
+    this.onSuccessContainer,
+
     this.info,
     this.onInfo,
+    this.infoContainer,
+    this.onInfoContainer,
   });
 }
 
