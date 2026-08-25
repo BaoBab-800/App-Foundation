@@ -54,6 +54,25 @@ const appTheme = AppTheme(
 );
 ```
 
+### Accessing theme colors
+
+AppKit colors are available through the current `BuildContext`:
+
+```dart
+final primaryColor = context.appColors.brand.primary;
+
+Container(
+  color: context.appColors.brand.primary,
+  child: Text(
+    'Hello',
+    style: TextStyle(
+      color: context.appColors.brand.onPrimary,
+    ),
+  ),
+);
+```
+The colors always correspond to the currently active theme, so the same code works for both light and dark themes.
+
 ## Palette
 
 AppKit provides a semantic color palette divided into several groups:
