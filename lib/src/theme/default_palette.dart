@@ -33,24 +33,24 @@ const defaultLightPalette = ResolvedPalette(
   ),
 
   status: ResolvedStatusColors(
-    error: Color(0xFFB3261E),
+    error: Color(0xFFBA1A1A),
     onError: Color(0xFFFFFFFF),
-    errorContainer: Color(0xFFF9DEDC),
-    onErrorContainer: Color(0xFF410E0B),
+    errorContainer: Color(0xFFFFDAD6),
+    onErrorContainer: Color(0xFF410002),
 
-    warning: Color(0xFF8A5700),
+    warning: Color(0xFF895800),
     onWarning: Color(0xFFFFFFFF),
     warningContainer: Color(0xFFFFDDB3),
-    onWarningContainer: Color(0xFF2B1700),
+    onWarningContainer: Color(0xFF2C1600),
 
-    success: Color(0xFF386A20),
+    success: Color(0xFF39701F),
     onSuccess: Color(0xFFFFFFFF),
-    successContainer: Color(0xFFB7F397),
-    onSuccessContainer: Color(0xFF0F2006),
+    successContainer: Color(0xFFB8F397),
+    onSuccessContainer: Color(0xFF102000),
 
-    info: Color(0xFF00639B),
+    info: Color(0xFF0068A6),
     onInfo: Color(0xFFFFFFFF),
-    infoContainer: Color(0xFFCBE6FF),
+    infoContainer: Color(0xFFC9E6FF),
     onInfoContainer: Color(0xFF001D32),
   ),
 
@@ -91,20 +91,20 @@ const defaultDarkPalette = ResolvedPalette(
   ),
 
   status: ResolvedStatusColors(
-    error: Color(0xFFF2B8B5),
-    onError: Color(0xFF601410),
-    errorContainer: Color(0xFF8C1D18),
-    onErrorContainer: Color(0xFFF9DEDC),
+    error: Color(0xFFFFB4AB),
+    onError: Color(0xFF690005),
+    errorContainer: Color(0xFF93000A),
+    onErrorContainer: Color(0xFFFFDAD6),
 
-    warning: Color(0xFFFFB95C),
-    onWarning: Color(0xFF462A00),
-    warningContainer: Color(0xFF654000),
-    onWarningContainer: Color(0xFFFFDDB3),
+    warning: Color(0xFFFFC44D),
+    onWarning: Color(0xFF3F2700),
+    warningContainer: Color(0xFF704900),
+    onWarningContainer: Color(0xFFFFDDB0),
 
-    success: Color(0xFF9CD67D),
-    onSuccess: Color(0xFF193600),
-    successContainer: Color(0xFF275016),
-    onSuccessContainer: Color(0xFFB7F397),
+    success: Color(0xFF91D36F),
+    onSuccess: Color(0xFF163600),
+    successContainer: Color(0xFF2D5719),
+    onSuccessContainer: Color(0xFFB8F39A),
 
     info: Color(0xFF96CCF8),
     onInfo: Color(0xFF00344F),
