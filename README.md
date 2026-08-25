@@ -1,4 +1,4 @@
-# AppKit
+# App Foundation
 
 A reusable Flutter toolkit for building consistent application themes.
 

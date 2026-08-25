@@ -1,6 +1,6 @@
-import 'package:app_kit/src/theme/app_palette.dart';
-import 'package:app_kit/src/theme/palette_resolver.dart';
-import 'package:app_kit/src/theme/resolved_palette.dart';
+import 'package:app_foundation/src/theme/app_palette.dart';
+import 'package:app_foundation/src/theme/palette_resolver.dart';
+import 'package:app_foundation/src/theme/resolved_palette.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

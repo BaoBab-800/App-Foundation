@@ -1,4 +1,4 @@
-import 'package:app_kit/src/theme/resolved_palette.dart';
+import 'package:app_foundation/src/theme/resolved_palette.dart';
 import 'package:flutter/material.dart';
 
 import 'app_palette.dart';

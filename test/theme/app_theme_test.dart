@@ -1,4 +1,4 @@
-import 'package:app_kit/app_kit.dart';
+import 'package:app_foundation/app_foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
